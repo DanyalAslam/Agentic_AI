@@ -20,11 +20,8 @@ from pydantic_ai.messages import ModelMessage
 from pydantic_ai.usage import Usage, UsageLimits
 from Models.models import FlightDetails
 from Models.models import Failed
+from Api_Keys import api_key_openAI, api_key_groq
 
-
-
-api_key_openAI = "YOUR_OPENAI_API_KEY"
-api_key_groq = "YOUR_GROQ_API_KEY"
 
 model_Llama_33_70B = GroqModel('llama-3.3-70b-versatile',api_key=api_key_groq)
 model_OpenAI_35_turbo = OpenAIModel('gpt-3.5-turbo-1106', api_key=api_key_openAI)
