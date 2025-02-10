@@ -3,3 +3,5 @@ pydantic-ai
 openai
 python-dotenv
 pytest
+nest_asyncio
+rich

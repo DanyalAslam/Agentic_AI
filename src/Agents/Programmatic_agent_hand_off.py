@@ -3,6 +3,10 @@
 
 # Here we show two agents used in succession, the first to find a flight and the second to extract the user's seat preference.
 
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..')) # Targets to the src directory of the project
+
 from typing import Dict, List, Optional,Union
 import nest_asyncio
 from pydantic import BaseModel, Field
@@ -14,8 +18,9 @@ import random
 from rich.prompt import Prompt
 from pydantic_ai.messages import ModelMessage
 from pydantic_ai.usage import Usage, UsageLimits
-from Data_Models import FlightDetails
-from Data_Models import Failed
+from Models.models import FlightDetails
+from Models.models import Failed
+
 
 
 api_key_openAI = "YOUR_OPENAI_API_KEY"
